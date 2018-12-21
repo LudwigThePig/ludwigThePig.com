@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavItem, MenuItem, NavProps, NavbarProps, NavItemProps, NavbarBrand, NavbarBrandProps } from 'react-bootstrap';
-import './App.css';
-
-function handleSelect(selectedKey) {
-  alert(`selected ${selectedKey}`);
-}
-
+import './App.scss';
+import brand from './img/favicon.png'
 
 class App extends Component{
   constructor(){
@@ -28,20 +24,31 @@ class Header extends Component{
   }
   render(){
     return(
-      <Nav bsStyle="pills" activeKey={1} onSelect={handleSelect}>
-      <NavItem eventKey={1} href="/home">
-      Home
-      </NavItem>
-      <NavItem eventKey={2} title="Item">
-        Technologies
-      </NavItem>
-      <NavItem eventKey={3}>
-        Projects
-      </NavItem>
-      <NavItem eventKey={3}>
-        Contact
-      </NavItem>
-    </Nav>
+
+      <Navbar color="default-color" inverse collapseOnSelect fixedTop>
+        <Navbar.Header>
+    <Navbar.Brand>
+      <a href="#"><img src={brand} alt='pig brand' /> ludwigThePig</a>
+    </Navbar.Brand>
+    <Navbar.Toggle />
+  </Navbar.Header>
+        <Navbar.Collapse>
+        <Nav>
+          <NavItem eventKey={1} href="#home">
+          Home
+          </NavItem>
+          <NavItem eventKey={2} href="#tech" title="Item">
+            Technologies
+          </NavItem>
+          <NavItem eventKey={3} href="#projects">
+            Projects
+          </NavItem>
+          <NavItem eventKey={3} href="#contact">
+            Contact
+          </NavItem>
+        </Nav>
+        </ Navbar.Collapse>
+      </Navbar>
     )
   }
 }
