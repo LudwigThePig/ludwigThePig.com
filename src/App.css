@@ -1,29 +1,7 @@
-.navbar{
-  background-color: #454851;
-  display: table;
-  height: 10vh;
-  position: fixed; 
-  top: 0; 
-  left: 0;
-  z-index: 5;
-  width: 100%;
-}
 
-.navbrand{
-  display: table-cell;
-  font-size:200%;
-
+.body{
+  height: 90vh;
 }
-.navbrand img{
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  }
-.link-ctr{
-  display: table-cell;
-  margin-left: auto;
-}
-
 
 footer{
   background-color:#bbb;
