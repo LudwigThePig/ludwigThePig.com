@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-//import { Nav, Navbar, NavItem, MenuItem, NavProps, NavbarProps, NavItemProps, NavbarBrand, NavbarBrandProps } from 'react-bootstrap';
 import './App.scss';
 import brand from './img/favicon.png'
 
 class App extends Component{
-  constructor(){
-    super();
-  }
   render(){
     return(
       <div>
@@ -28,24 +24,32 @@ class Navbar extends Component {
   }
 
   //offset values are location of elements minus the navbar (10vh)
-  handleScroll = (e)=>{
+  handleScroll = ()=>{
     let wind = window.pageYOffset;
     let tenVh = window.innerHeight / 10;
     let offset = {
       home: document.getElementById('home').offsetTop - tenVh,
       tech: document.getElementById('tech').offsetTop - tenVh,
       projects: document.getElementById('projects').offsetTop - tenVh,
-      contact: document.getElementById('contact').offsetTop
+      contact: document.getElementById('contact').offsetTop - tenVh
     };
-    console.log('home top: ' + offset.home + ", tech top: " + offset.tech + 'proj top: ' + offset.projects + ", contact top: " + offset.contact)
     if (wind < offset.tech){
-      console.log('home')
+      this.setState({
+        active: 'home'
+      });
     } else if (wind > offset.tech && wind < offset.projects){
-      console.log('tech')
-    } else if ( wind < offset.contact){
-      console.log('projects')
+      this.setState({
+        active: 'tech'
+      });
+    } else if ( wind > offset.projects && wind < offset.contact){
+      this.setState({
+        active: 'projects'
+      });
     } else if (wind > offset.contact){
-      console.log('contact')
+      this.setState = ({
+        active: 'tech'
+      });
+      console.log(this.state.active)
     }
   }
   componentDidMount(){
@@ -59,15 +63,20 @@ class Navbar extends Component {
     return(
       <div className="navbar">
         <div className="navbrand">  
-        <a href="#">
+        <a href="#home">
           <img src={brand} alt='pig brand' />
           LtP</a>
         </div>
         <div className="link-ctr">
-            <a href="#home"><span id='home'>Home</span></a>
-            <a href="#tech"><span id='code'>Code</span></a>
-            <a href="#projects"><span id='photo'>Photo</span></a>
-            <a href="#contact"><span id='contact'>Contact</span></a>
+            <a href="#home" className={
+              (this.state.active=='home')?'active':null}>
+              <span>Home</span></a>
+            <a href="#tech" className={
+              (this.state.active=='tech')?'active':null}><span>Code</span></a>
+            <a href="#projects" className={
+              (this.state.active=='projects')?'active':null}><span>Photo</span></a>
+            <a href="#contact" className={
+              (this.state.active=='contact')?'active':null}><span>Contact</span></a>
         </div>
     </div>
     )
@@ -148,9 +157,6 @@ class Contact extends Component{
 }
 
 class Footer extends Component{
-  constructor(){
-    super();
-  }
   render(){
     return(
       <footer>		

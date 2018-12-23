@@ -22,7 +22,7 @@ body{
     color: $text-clr;
     font-size: 1.5em;
   }
-  a:hover{
+  a:hover, .active{
     color: white;
     text-decoration: none;
   }
@@ -41,9 +41,9 @@ body{
   }
 }
 .body{
+  margin-top: 10vh;
   height: 90vh;
 }
-
 
 #home{
   font-weight: black;
