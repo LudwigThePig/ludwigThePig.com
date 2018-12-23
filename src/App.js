@@ -26,8 +26,27 @@ class Navbar extends Component {
     }
     this.handleScroll = this.handleScroll.bind(this);
   }
+
+  //offset values are location of elements minus the navbar (10vh)
   handleScroll = (e)=>{
-    console.log('ayy')
+    let wind = window.pageYOffset;
+    let tenVh = window.innerHeight / 10;
+    let offset = {
+      home: document.getElementById('home').offsetTop - tenVh,
+      tech: document.getElementById('tech').offsetTop - tenVh,
+      projects: document.getElementById('projects').offsetTop - tenVh,
+      contact: document.getElementById('contact').offsetTop
+    };
+    console.log('home top: ' + offset.home + ", tech top: " + offset.tech + 'proj top: ' + offset.projects + ", contact top: " + offset.contact)
+    if (wind < offset.tech){
+      console.log('home')
+    } else if (wind > offset.tech && wind < offset.projects){
+      console.log('tech')
+    } else if ( wind < offset.contact){
+      console.log('projects')
+    } else if (wind > offset.contact){
+      console.log('contact')
+    }
   }
   componentDidMount(){
     window.addEventListener('scroll', this.handleScroll);
