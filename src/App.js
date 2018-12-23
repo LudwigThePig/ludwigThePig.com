@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavItem, MenuItem, NavProps, NavbarProps, NavItemProps, NavbarBrand, NavbarBrandProps } from 'react-bootstrap';
+//import { Nav, Navbar, NavItem, MenuItem, NavProps, NavbarProps, NavItemProps, NavbarBrand, NavbarBrandProps } from 'react-bootstrap';
 import './App.scss';
 import brand from './img/favicon.png'
 
@@ -10,7 +10,7 @@ class App extends Component{
   render(){
     return(
       <div>
-        <Header />
+        <Navbar />
         <Body />
         <Footer />
       </div>
@@ -18,40 +18,43 @@ class App extends Component{
   }
 }
 
-class Header extends Component{
+class Navbar extends Component {
   constructor(){
     super();
+    this.state = {
+      active: 'home'
+    }
+    this.handleScroll = this.handleScroll.bind(this);
   }
+  handleScroll = (e)=>{
+    console.log('ayy')
+  }
+  componentDidMount(){
+    window.addEventListener('scroll', this.handleScroll);
+  }
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
   render(){
     return(
-
-      <Navbar color="default-color" inverse collapseOnSelect fixedTop>
-        <Navbar.Header>
-    <Navbar.Brand>
-      <a href="#"><img src={brand} alt='pig brand' /> ludwigThePig</a>
-    </Navbar.Brand>
-    <Navbar.Toggle />
-  </Navbar.Header>
-        <Navbar.Collapse>
-        <Nav>
-          <NavItem eventKey={1} href="#home">
-          Home
-          </NavItem>
-          <NavItem eventKey={2} href="#tech" title="Item">
-            Technologies
-          </NavItem>
-          <NavItem eventKey={3} href="#projects">
-            Projects
-          </NavItem>
-          <NavItem eventKey={3} href="#contact">
-            Contact
-          </NavItem>
-        </Nav>
-        </ Navbar.Collapse>
-      </Navbar>
+      <div className="navbar">
+        <div className="navbrand">  
+        <a href="#">
+          <img src={brand} alt='pig brand' />
+          LtP</a>
+        </div>
+        <div className="link-ctr">
+            <a href="#home"><span id='home'>Home</span></a>
+            <a href="#tech"><span id='code'>Code</span></a>
+            <a href="#projects"><span id='photo'>Photo</span></a>
+            <a href="#contact"><span id='contact'>Contact</span></a>
+        </div>
+    </div>
     )
   }
 }
+
 
 class Body extends Component{
   render(){

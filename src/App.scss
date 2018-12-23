@@ -1,34 +1,63 @@
-$cPrimary:#659DBD;
-$cSecondary: #8d8741;
-$c3: #DAAD86;
-$c4: #BC986A;
-$c5: #FBEEC1;
+$primary-clr: #454851;
+$secondary-clr: #262424;
+$text-clr: #111;
 
 body{
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
-  color: #343434;
+  color: #121212;
+  margin-top: 10vh;
 }
 
+.navbar{
+  background-color: $primary-clr;
+  display: table;
+  height: 10vh;
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  a{
+    color: $text-clr;
+    font-size: 1.5em;
+  }
+  a:hover{
+    color: white;
+    text-decoration: none;
+  }
+  .navbrand{
+    display: table-cell;
+    font-size:200%;
+    img{
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      }
+  }
+  .link-ctr{
+    display: table-cell;
+    margin-left: auto;
+  }
+}
 .body{
   height: 90vh;
 }
 
-.navbar-inverse .navbar-brand{
-  font-weight: bold;
-  color: white;
-  text-shadow: none !important;
-  }
-.navbar-inverse, .navbar-inverse .navbar-nav>li>a{
-  color: white;
-}
-.navbar-brand>img {
-  display: inline;
-}
+// .navbar-inverse .navbar-brand{
+//   font-weight: bold;
+//   color: white;
+//   text-shadow: none !important;
+//   }
+// .navbar-inverse, .navbar-inverse .navbar-nav>li>a{
+//   color: white;
+// }
+// .navbar-brand>img {
+//   display: inline;
+// }
 
 #home{
-  background: $cPrimary;
-  color: #eee;
+  //background: $cPrimary;
   font-weight: black;
 }
 
