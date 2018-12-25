@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import brand from './img/favicon.png';
+import perins from './img/perins-fire-md.jpg'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -23,9 +24,11 @@ class Navbar extends Component {
   constructor(){
     super();
     this.state = {
-    active: 'home'
+    active: 'home',
+    burg: false
     };
     this.handleScroll = this.handleScroll.bind(this);
+    this.burgFunc = this.burgFunc.bind(this);
 
     
   }
@@ -72,17 +75,30 @@ class Navbar extends Component {
       }
     }
   }
-
+  burgFunc = ()=>{
+    this.setState({
+      burg: !this.state.burg
+    })  
+    // x.classList.toggle("change");
+  }
   render(){
+    let ww = window.innerWidth;
+    console.log(ww);
     
     return(
       <div className="navbar" >
         <div className="navbrand">  
         <a href="#home">
           <img src={brand} alt='pig brand' />
-          LtP</a>
+        </a>
+        <span id='ltp'>LtP</span>
         </div>
         <div className="link-ctr">
+        <div className={(this.state.burg)?'hamburger, change':'hamburger'} onClick={this.burgFunc}>
+        <div className="bar1"></div>
+        <div className="bar2"></div>
+        <div className="bar3"></div>
+      </div>
             <a href="#home" className={
               (this.state.active ==='home')?'active':null}>
               <span>Home</span></a>
@@ -116,10 +132,16 @@ class Home extends Component{
   render(){
     return(
       <div id="home" className="body">
-        <h2>Howdy, my name is Morgan Galvin.</h2>
-        <p>I am a freelance web developer and photographer. I have just moved to Wellington, NZ, from the United States, and am seeking employment as a developer.
-          <br />On this site, you will find references to my work, projects, and expertise.
-        </p>
+      <div className='left-col'>
+        <img src={perins} alt='perins peak on fire'></img>
+      </div>
+      <div className='right-col'>
+          <h1>Howdy, my name is Morgan Galvin.</h1>
+          <h2>I am a freelance web developer</h2> 
+          <p>I have just moved to Wellington, NZ, from the United States, and am seeking employment as a developer.
+            <br />On this site, you will find references to my work, projects, and expertise.
+          </p>
+        </div>
       </div>
       
     )
