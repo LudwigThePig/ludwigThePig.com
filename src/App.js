@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './App.scss';
-import brand from './img/favicon.png'
+import brand from './img/favicon.png';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fab } from '@fortawesome/free-brands-svg-icons'
+library.add(fab);
+
 
 class App extends Component{
   render(){
@@ -66,8 +71,6 @@ class Navbar extends Component {
         });
       }
     }
-    console.log(`Home ${offset.home}| Tech ${offset.tech}| 
-    Projects ${offset.projects}| Contact ${offset.contact}`)
   }
 
   render(){
@@ -171,32 +174,22 @@ class Footer extends Component{
   render(){
     return(
       <footer id='footer'>		
-        <a href="https://www.linkedin.com/in/morgangalvin" className="fab fa-linkedin-square"></a>
-        <a href="https://codepen.io/moegain/" className="fab fa-codepen"></a>
-        <a href="https://www.instagram.com/morgangalvinphoto/" className="fab fa-instagram"></a>
-        <a href="https://www.strava.com/athletes/5897641" className="fab fa-strava"></a>
-        <a href="mailto:morgan@ludwigthepig.com?Subject=Hello%20Ludwig!" target="_top" className="fas fa-envelope"></a>
+      <a href="https://www.linkedin.com/in/morgangalvin">
+        <FontAwesomeIcon icon={['fab', 'linkedin']} className='fa' size="3x" />
+      </a>
+      <FontAwesomeIcon icon={['fab', 'github']} className='fa' size="3x" />
+      <a href="https://codepen.io/moegain/">
+        <FontAwesomeIcon icon={['fab', 'codepen']} className='fa'  size="3x" />
+      </a>
+      <a href="https://www.instagram.com/morgangalvinphoto/">
+      <FontAwesomeIcon icon={['fab', 'instagram']} className='fa' size="3x" />
+      </a>
+      <a href="https://www.strava.com/athletes/5897641">
+      <FontAwesomeIcon icon={['fab', 'strava']} className='fa' size="3x" />
+      </a>
       </footer>
     )
   }
 }
 
-
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

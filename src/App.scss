@@ -49,25 +49,25 @@ body{
 }
 
 footer{
-  background-color:#bbb;
+  background-color:#343434;
     color:black;
-  border-radius:5px;
+    height: 10vh;
+  border-radius:5px 5px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 3;
 }
-.fas, .fab, .fa {
-
-  font-size: 30px;
+  .fa {
   text-align: center;
   background: black;
   color: white;
-
   padding: 4px;
   margin: 5px 2px;
-  border-radius:5px
-}
-.fas:hover, .fab:hover, .fa:hover {
- opacity:0.7;
- color:black;
- background: white;
- text-decoration: none;
-}
-
+  border-radius:5px;
+  }
+  .fa:hover {
+  color:black;
+  background: white;
+  text-decoration: none;
+  }
