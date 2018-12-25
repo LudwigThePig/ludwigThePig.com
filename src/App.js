@@ -18,9 +18,17 @@ class Navbar extends Component {
   constructor(){
     super();
     this.state = {
-      active: 'home'
-    }
+    active: 'home'
+    };
     this.handleScroll = this.handleScroll.bind(this);
+
+    
+  }
+  componentDidMount(){
+    document.addEventListener('scroll', this.handleScroll);
+  }
+ componentWillUnmount(){
+    document.removeEventListener('scroll', this.handleScroll);
   }
 
   //offset values are location of elements minus the navbar (10vh)
@@ -31,37 +39,41 @@ class Navbar extends Component {
       home: document.getElementById('home').offsetTop - tenVh,
       tech: document.getElementById('tech').offsetTop - tenVh,
       projects: document.getElementById('projects').offsetTop - tenVh,
-      contact: document.getElementById('contact').offsetTop - tenVh
+      contact: document.getElementById('contact').offsetTop - tenVh,
     };
     if (wind < offset.tech){
-      this.setState({
-        active: 'home'
-      });
+      if (this.state.active !== 'home' ){ 
+        this.setState({
+          active: 'home'
+        });
+      }
     } else if (wind > offset.tech && wind < offset.projects){
-      this.setState({
-        active: 'tech'
-      });
-    } else if ( wind > offset.projects && wind < offset.contact){
-      this.setState({
-        active: 'projects'
-      });
+      if (this.state.active !== 'tech' ){
+        this.setState({
+          active: 'tech'
+        });
+      }
+    } else if ( wind > offset.projects && wind < offset.contact ){
+      if (this.state.active !== 'projects' ){
+        this.setState({
+          active: 'projects'
+        });
+        }
     } else if (wind > offset.contact){
-      this.setState = ({
-        active: 'tech'
-      });
-      console.log(this.state.active)
+      if (this.state.active !== 'contact' ){
+        this.setState({
+          active: 'contact'
+        });
+      }
     }
-  }
-  componentDidMount(){
-    window.addEventListener('scroll', this.handleScroll);
-  }
-  componentWillUnmount(){
-    window.removeEventListener('scroll', this.handleScroll);
+    console.log(`Home ${offset.home}| Tech ${offset.tech}| 
+    Projects ${offset.projects}| Contact ${offset.contact}`)
   }
 
   render(){
+    
     return(
-      <div className="navbar">
+      <div className="navbar" >
         <div className="navbrand">  
         <a href="#home">
           <img src={brand} alt='pig brand' />
@@ -69,14 +81,14 @@ class Navbar extends Component {
         </div>
         <div className="link-ctr">
             <a href="#home" className={
-              (this.state.active=='home')?'active':null}>
+              (this.state.active ==='home')?'active':null}>
               <span>Home</span></a>
             <a href="#tech" className={
-              (this.state.active=='tech')?'active':null}><span>Code</span></a>
+              (this.state.active === 'tech')?'active':null}><span>Tech</span></a>
             <a href="#projects" className={
-              (this.state.active=='projects')?'active':null}><span>Photo</span></a>
+              (this.state.active === 'projects')?'active':null}><span>Projects</span></a>
             <a href="#contact" className={
-              (this.state.active=='contact')?'active':null}><span>Contact</span></a>
+              (this.state.active === 'contact')?'active':null}><span>Contact</span></a>
         </div>
     </div>
     )
@@ -91,7 +103,7 @@ class Body extends Component{
       <Home />
       <Tech />
       <Projects />
-      <Contact />
+      <Contact />    
       </div>
     )
   }
@@ -150,7 +162,6 @@ class Contact extends Component{
           <br />
           +64 21 029 81349 <i>(in New Zealand temporarily)</i>
         </p>
-        
       </div>
     )
   }
@@ -159,7 +170,7 @@ class Contact extends Component{
 class Footer extends Component{
   render(){
     return(
-      <footer>		
+      <footer id='footer'>		
         <a href="https://www.linkedin.com/in/morgangalvin" className="fab fa-linkedin-square"></a>
         <a href="https://codepen.io/moegain/" className="fab fa-codepen"></a>
         <a href="https://www.instagram.com/morgangalvinphoto/" className="fab fa-instagram"></a>
@@ -172,3 +183,20 @@ class Footer extends Component{
 
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
