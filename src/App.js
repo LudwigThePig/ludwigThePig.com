@@ -25,7 +25,8 @@ class Navbar extends Component {
     super();
     this.state = {
     active: 'home',
-    burg: false
+    burg: false,
+    mobile: false
     };
     this.handleScroll = this.handleScroll.bind(this);
     this.burgFunc = this.burgFunc.bind(this);
@@ -82,9 +83,7 @@ class Navbar extends Component {
     // x.classList.toggle("change");
   }
   render(){
-    let ww = window.innerWidth;
-    console.log(ww);
-    
+    let ww = window.innerWidth;    
     return(
       <div className="navbar" >
         <div className="navbrand">  
@@ -93,21 +92,21 @@ class Navbar extends Component {
         </a>
         <span id='ltp'>LtP</span>
         </div>
-        <div className="link-ctr">
+        <div className={(this.state.burg)?'dropdown':'no-dropdown'} >
+          <a href="#home" className={
+            (this.state.active ==='home')?'active':null}>
+            <span>Home</span></a>
+          <a href="#tech" className={
+            (this.state.active === 'tech')?'active':null}><span>Tech</span></a>
+          <a href="#projects" className={
+            (this.state.active === 'projects')?'active':null}><span>Projects</span></a>
+          <a href="#contact" className={
+            (this.state.active === 'contact')?'active':null}><span>Contact</span></a>
+        </div>
         <div className={(this.state.burg)?'hamburger, change':'hamburger'} onClick={this.burgFunc}>
-        <div className="bar1"></div>
-        <div className="bar2"></div>
-        <div className="bar3"></div>
-      </div>
-            <a href="#home" className={
-              (this.state.active ==='home')?'active':null}>
-              <span>Home</span></a>
-            <a href="#tech" className={
-              (this.state.active === 'tech')?'active':null}><span>Tech</span></a>
-            <a href="#projects" className={
-              (this.state.active === 'projects')?'active':null}><span>Projects</span></a>
-            <a href="#contact" className={
-              (this.state.active === 'contact')?'active':null}><span>Contact</span></a>
+          <div className="bar1"></div>
+          <div className="bar2"></div>
+          <div className="bar3"></div>
         </div>
     </div>
     )
