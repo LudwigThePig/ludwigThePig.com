@@ -76,6 +76,7 @@ html {
   .hamburger{
     display: inline-block;
     cursor: pointer;
+    z-index: 2;
   }
   #ltp{
     display: none;
@@ -85,12 +86,17 @@ html {
   }
   .dropdown{
     display: flex;
-    flex-wrap: wrap;
-    height: 30vh;
-    top: 0;
-    background: $primary-clr; 
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 200%;
+    background: $primary-clr;
+    margin-top: 50px;
+    width: 100vw;
+    position: absolute; 
     a{
-      width: 100%;
+      font-size: 2em;
+      font-weight: 400;
     }
   }
   
