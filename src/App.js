@@ -48,6 +48,7 @@ class Navbar extends Component {
       home: document.getElementById('home').offsetTop - tenVh,
       tech: document.getElementById('tech').offsetTop - tenVh,
       projects: document.getElementById('projects').offsetTop - tenVh,
+      about: document.getElementById('about').offsetTop - tenVh,
       contact: document.getElementById('contact').offsetTop - tenVh,
     };
     if (wind < offset.tech){
@@ -62,13 +63,19 @@ class Navbar extends Component {
           active: 'tech'
         });
       }
-    } else if ( wind > offset.projects && wind < offset.contact ){
+    } else if ( wind > offset.projects && wind < offset.about ){
       if (this.state.active !== 'projects' ){
         this.setState({
           active: 'projects'
         });
         }
-    } else if (wind > offset.contact){
+    } else if ( wind > offset.about && wind < offset.contact ){
+      if (this.state.active !== 'about' ){
+        this.setState({
+          active: 'about'
+        });
+        }
+    }else if (wind > offset.contact){
       if (this.state.active !== 'contact' ){
         this.setState({
           active: 'contact'
@@ -99,6 +106,8 @@ class Navbar extends Component {
             (this.state.active === 'tech')?'active':null}><span>Tech</span></a>
           <a href="#projects" className={
             (this.state.active === 'projects')?'active':null}><span>Projects</span></a>
+          <a href="#about" className={
+            (this.state.active === 'about')?'active':null}><span>About</span></a>
           <a href="#contact" className={
             (this.state.active === 'contact')?'active':null}><span>Contact</span></a>
         </div>
@@ -120,6 +129,7 @@ class Body extends Component{
       <Home />
       <Tech />
       <Projects />
+      <About />
       <Contact />    
       </div>
     )
@@ -134,10 +144,10 @@ class Home extends Component{
         <img src={perins} alt='perins peak on fire'></img>
       </div>
       <div className='right-col'>
-          <h4>Howdy, my name is </h4>
+          <h2>Howdy, my name is </h2>
           <h1>Morgan Galvin</h1>
-          <h2>I am web developer</h2> 
-          <p>I have just moved to Wellington, NZ, from the United States, and am seeking employment as a developer. On this site, you will find references to my work, projects, and expertise.
+          <h2 style={{textAlign: 'center'}}>Javascript Extraordinaire</h2> 
+          <p>I am a web developer living Wellington, NZ. On this site, you will find references to my work, projects, and expertise. I am seeking new opportunities.
           </p>
         </div>
       </div>
@@ -174,7 +184,21 @@ class Projects extends Component{
     )
   }
 }
+class About extends Component{
+  render(){
+    return(
+      <div id="about" className="body">
+        <h2>About Morgan</h2>
+        <p>My name is Morgan. I moved to Colorado from New York in Janurary 2012. In December 2018, I will be taking a one way flight to Wellington, New Zealand. When I'm not building web apps or taking photos, I am either running, skiing, biking, or running some more. The outdoors is what pulled me out to Colorado. 
+        <br />
+        I received my Bachelors of Arts from Fort Lewis College in Durango, studying philosophy. While I do retain interest, philosophy has never interested me as a career path for me. Although, I do find the critical and analytical skills that I have developed from studying philosophy have helped me flourish in other fields, such as programming.</p>
 
+        <h2>About Ludwig</h2>
+        <p>The name Ludwig The Pig stems from one of favorite philosophers, Ludwig Wittegenstein. Ludwig just so happens to rhyme with pig. Hence, the name 'Ludwig the Pig'. Ludwig has developed his own persona and the curious visitor may catch a rare glance of him.</p>
+      </div>
+    )
+  }
+}
 class Contact extends Component{
   render(){
     return(
