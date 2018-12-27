@@ -83,7 +83,6 @@ class Navbar extends Component {
     // x.classList.toggle("change");
   }
   render(){
-    let ww = window.innerWidth;    
     return(
       <div className="navbar" >
         <div className="navbrand">  
@@ -135,10 +134,10 @@ class Home extends Component{
         <img src={perins} alt='perins peak on fire'></img>
       </div>
       <div className='right-col'>
-          <h1>Howdy, my name is Morgan Galvin.</h1>
-          <h2>I am a freelance web developer</h2> 
-          <p>I have just moved to Wellington, NZ, from the United States, and am seeking employment as a developer.
-            <br />On this site, you will find references to my work, projects, and expertise.
+          <h4>Howdy, my name is </h4>
+          <h1>Morgan Galvin</h1>
+          <h2>I am web developer</h2> 
+          <p>I have just moved to Wellington, NZ, from the United States, and am seeking employment as a developer. On this site, you will find references to my work, projects, and expertise.
           </p>
         </div>
       </div>

@@ -99,7 +99,6 @@ html {
       font-weight: 400;
     }
   }
-  
 }
 // END NAVBAR STYLING
 
@@ -116,7 +115,8 @@ html {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  text-align: start;
   img{
     max-width: 100%;
     max-height: 60vh;
@@ -124,22 +124,58 @@ html {
     width: auto;
     flex-shrink: 3;
   }
+  h1{
+    font-size: 60px; 
+    font-weight: 500;
+    margin: 0; 
+  }
+  h2{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 0;
+    margin: 3px auto 15px;
+  }
+  h4{
+    margin: 0 ;
+  }
+  p{
+    font-size: 22px;
+  }
   .left-col{
-    margin: 1em auto
+    margin: 1em auto;
   }
   .right-col{
-    text-align: center
+    width: 50%;
   }
 }
-@media screen and (max-width: $break-medium){
+
+@media screen and (max-width: 590px){
   #home{
     flex-flow: wrap;
     img{
       max-height: 40vh; 
-      margin: 2px;
+      margin: 2px auto 0px auto;
+    }
+    h1{
+      font-size: 35px; 
+      font-weight: bold;
+      margin: 0; 
+    }
+    h2{
+      font-size: 20px;
+      font-weight: 400;
+      padding: 0;
+      margin: 3px auto 15px;
+    }
+    h4{
+      margin: 0 ;
+    }
+    p{
+      font-size: 17px;
     }
   }
 }
+
 //END HOME STYLING
 
 //BEGIN FOOTER STYLING
