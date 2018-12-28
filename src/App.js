@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import brand from './img/favicon.png';
 import perins from './img/perins-fire-md.jpg'
+import coffee from './img/Coffee-md.jpg'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -149,6 +150,7 @@ class Home extends Component{
           <h2 style={{textAlign: 'center'}}>Javascript Extraordinaire</h2> 
           <p>I am a web developer living Wellington, NZ. On this site, you will find references to my work, projects, and expertise. I am seeking new opportunities.
           </p>
+          <h4><a href='https://www.duracellenergybank.com/'>INSP</a></h4>
         </div>
       </div>
       
@@ -160,9 +162,29 @@ class Tech extends Component{
   render(){
     return(
       <div id="tech" className="body">
-        <h1>Hey, I know how a lot about Javascript, React, Redux, d3.js, and, of course, HTML/CSS/SCSS</h1>
-        <h2>Hire me!!!</h2>
-        <p>this is a placeholderrrrr</p>
+        <div className="left-col">
+          <h1>Tech I Work With</h1>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React  Redux</li>
+            <li>Node.js & Express.js</li>
+            <li>MongoDB & Mongoose</li>
+            <li>C#</li>
+            <li>Photoshop</li>
+          </ul>
+        </div>
+        <div className="right-col">
+        <img src={coffee} alt="81301 Coffee" />
+          <h1>Tech I Want to Work With</h1>
+          <ul>
+              <li>Everything</li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
       </div>
     )
   }
@@ -221,7 +243,9 @@ class Footer extends Component{
       <a href="https://www.linkedin.com/in/morgangalvin">
         <FontAwesomeIcon icon={['fab', 'linkedin']} className='fa' size="3x" />
       </a>
-      <FontAwesomeIcon icon={['fab', 'github']} className='fa' size="3x" />
+      <a href="https://github.com/LudwigThePig">
+        <FontAwesomeIcon icon={['fab', 'github']} className='fa' size="3x" />
+      </a>
       <a href="https://codepen.io/moegain/">
         <FontAwesomeIcon icon={['fab', 'codepen']} className='fa'  size="3x" />
       </a>

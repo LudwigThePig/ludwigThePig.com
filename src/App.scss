@@ -8,11 +8,45 @@ body{
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
   color: #121212;
-
 }
 html {
   scroll-behavior: smooth;
 }
+
+h1{
+  font-size: 40px; 
+  font-weight: 500;
+}
+h2{
+  font-size: 32px;
+  font-weight: 400;
+}
+
+p, li{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+}
+ul{
+  list-style: none;
+}
+
+@media screen and (max-width: $break-medium){
+  h1{
+    font-size: 38px; 
+    font-weight: bold;
+    margin: 0; 
+  }
+  h2{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+  }
+  p{
+    font-size: 17px;
+  }
+}
+
 //END MAJOR STYLING AND VARIABLE DECLARATIONS
 
 
@@ -20,8 +54,8 @@ html {
 .navbar{
   background-color: $primary-clr;
   display: flex;
-  align-items: center; 
-  justify-content: space-between;
+  align-items: baseline; 
+  justify-content: space-around;
   height: 10vh;
   position: fixed; 
   top: 0; 
@@ -31,6 +65,7 @@ html {
   a{
     color: $text-clr;
     font-size: 1.5em;
+    text-decoration: none;
   }
   a:hover, .active{
     color: white;
@@ -71,9 +106,10 @@ html {
 
 @media screen and (max-width: $break-medium){
   .navbar{
-    align-items: flex-start;
+    align-items: center;
   }
   .hamburger{
+    margin-top: 5px;
     display: inline-block;
     cursor: pointer;
     z-index: 2;
@@ -105,39 +141,9 @@ html {
 //BEGIN BODY STYLING
 .body{
   padding-top: 10vh;
-  height: 90vh;
+  height: 100vh;
 }
 
-h1{
-  font-size: 40px; 
-  font-weight: 500;
-}
-h2{
-  font-size: 30px;
-  font-weight: 400;
-  color: $primary-clr;
-}
-
-p{
-  font-size: 22px;
-}
-
-@media screen and (max-width: $break-medium){
-  h1{
-    font-size: 38px; 
-    font-weight: bold;
-    margin: 0; 
-  }
-  h2{
-    font-size: 20px;
-    font-weight: 400;
-    padding: 0;
-    margin: 0;
-  }
-  p{
-    font-size: 17px;
-  }
-}
 //END BODY STYLING
 
 //BEGIN HOME STYLING
@@ -159,8 +165,7 @@ p{
     font-size: 60px; 
     font-weight: 500;
     margin: 0;
-  }
-  h2{
+  }  h2{
     padding: 0;
     margin: 0;
     color: $primary-clr;
@@ -176,6 +181,7 @@ p{
 @media screen and (max-width: 590px){
   #home{
     flex-flow: wrap;
+    justify-content: space-between;
     height: 100%;
     img{
       max-height: 40vh; 
@@ -188,7 +194,81 @@ p{
 }
 
 //END HOME STYLING
+//BEGIN TECH STYLINE
 
+#tech{
+  background: #1d1d1b ;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  h1{
+    color: #CB8B5A;
+  }
+  li{
+    font-size: 30px;
+  }
+  .right-col{
+    h1, p{
+      text-align: right;
+    }
+  }
+  img{
+    width: 45vw;
+    height: auto;
+}
+}
+@media screen and (max-width: $break-large){
+  #tech{
+    .right-col{
+      margin-top: 10vh;
+    }
+    h1{
+    font-size: 32px;
+    }
+    li{
+      font-size: 22px;
+    }
+  }
+}
+@media screen and (max-width: $break-medium){
+  #tech{
+    flex-flow: column;
+    justify-content: center;
+    h1{
+      font-size: 30px;
+    }
+    li{
+      font-size: 18px;
+    }
+    ul{
+      margin-left: -20px;
+      }
+      img{
+      width: 80vw;
+      }
+    
+  }
+
+}
+//END TECH STYLING
+//BEGIN ABOUT STYLING
+@media screen and (max-width: $break-large){
+  #about{
+  height: 110vh;
+}
+}
+@media screen and (max-width: $break-medium){
+  #about{
+  height: 130vh;
+}
+}
+//END ABOUT STYLINIG
+//BEGIN CONTACT STYLING
+#contact{
+  height: 50vh;
+}
+
+//END CONTACT STYLING
 //BEGIN FOOTER STYLING
 footer{
   background-color:#343434;
