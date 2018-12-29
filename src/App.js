@@ -3,6 +3,8 @@ import './App.scss';
 import brand from './img/favicon.png';
 import perins from './img/perins-fire-md.jpg'
 import coffee from './img/Coffee-md.jpg'
+import drc from './img/drc-site.jpg';
+import rfi from './img/rf-site.jpg';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -238,20 +240,22 @@ class Portfolio extends Component{
   render(){
     return(
       <div id="portfolio" className="body">
-        <div className="left-col">
-        <h1></h1>
+         <div className="jumbo"> 
+          <div className="left-col">
+            <h1>Websites</h1>
+            <h1 className="disabled">Projects</h1>
+          </div>
+          <div className='right-col'>
+            <div className="portfolio-wrapper">
+              <p>ROARING FORK INSURANCE</p>
+              <img src={rfi} alt="Roaring Fork Insurance"></img>
+            </div>
+            <div className="portfolio-wrapper">
+              <p>DURANGO RUNNING CLUB</p>
+              <img src={drc} alt="Durango Running Club"></img>
+            </div>
+          </div>
         </div>
-        <div className='right-col'>
-          <h1>Yeah, I've done some pretty cool stuff</h1>
-          <h2>Here is a list!</h2>
-          <ul>
-            <li>Markdown Previewer!</li>
-            <li>Drum Machine!</li>
-            <li>Klackers!</li>
-          </ul>
-          <p>Check out my Github and Codepen for more!</p>
-        </div>
-
       </div>
     )
   }

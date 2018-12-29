@@ -1,6 +1,7 @@
 //VARIABLES
 $primary-clr: #454851;
-$secondary-clr: #262424;
+$secondary-clr: #CB8B5A;
+$third-clr: #1d1d1b;
 $text-clr: #111;
 $break-medium: 400px;
 $break-large: 720px;
@@ -197,7 +198,7 @@ ul{
 
 //TECH
 #tech{
-  background: #1d1d1b ;
+  background: $third-clr ;
   color: #fff;
   display: flex;
   justify-content: space-around;
@@ -210,7 +211,6 @@ ul{
     text-decoration: none;
     cursor: pointer;
     font-weight: 100;
-
   }
   a:hover, .disabled:hover{
     text-decoration: bold;
@@ -264,9 +264,44 @@ ul{
 }
 //PORTFOLIO
 #portfolio{
-  display: flex;
+  .jumbo{
+    background: $secondary-clr;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: space-around;
+  }
+  h1{
+    color: $secondary-clr; 
+  }
+  .left-col{
+    background: $third-clr;
+  }
+  .disabled{
+    color: #ddd;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 100;
+  }
+  .disabled:hover{
+    color: $secondary-clr;
+  }
   .right-col{
-  background: #CB8B5A;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    height: 80vh;
+    margin: 10px 50px auto 50px;
+    }
+  .portfolio-wrapper{
+    text-align: center;
+    max-width: 45%;
+    img{
+      max-width: 100%;
+      width: auto;
+    }
   }
 }
 
