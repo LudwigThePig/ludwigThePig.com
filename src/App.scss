@@ -1,9 +1,12 @@
+//VARIABLES
 $primary-clr: #454851;
 $secondary-clr: #262424;
 $text-clr: #111;
 $break-medium: 400px;
 $break-large: 720px;
 
+
+//GENERAL STYLING
 body{
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
@@ -30,6 +33,7 @@ ul{
   list-style: none;
 }
 
+
 @media screen and (max-width: $break-medium){
   h1{
     font-size: 38px; 
@@ -47,10 +51,8 @@ ul{
   }
 }
 
-//END MAJOR STYLING AND VARIABLE DECLARATIONS
 
-
-//BEGIN NAVBAR STYLING
+//NAVBAR
 .navbar{
   background-color: $primary-clr;
   display: flex;
@@ -136,17 +138,16 @@ ul{
     }
   }
 }
-// END NAVBAR STYLING
 
-//BEGIN BODY STYLING
+
+//BODY COMPONENTS
 .body{
   padding-top: 10vh;
   height: 100vh;
 }
 
-//END BODY STYLING
 
-//BEGIN HOME STYLING
+//HOME
 #home{
   font-weight: black;
   display: flex;
@@ -193,9 +194,8 @@ ul{
   }
 }
 
-//END HOME STYLING
-//BEGIN TECH STYLINE
 
+//TECH
 #tech{
   background: #1d1d1b ;
   color: #fff;
@@ -203,6 +203,18 @@ ul{
   justify-content: space-around;
   h1{
     color: #CB8B5A;
+    margin: 0;
+  }
+  a, a:active, .disabled{
+    color: $primary-clr;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 100;
+
+  }
+  a:hover, .disabled:hover{
+    text-decoration: bold;
+    color: #fff;
   }
   li{
     font-size: 30px;
@@ -250,7 +262,15 @@ ul{
   }
 
 }
-//END TECH STYLING
+//PORTFOLIO
+#portfolio{
+  display: flex;
+  .right-col{
+  background: #CB8B5A;
+  }
+}
+
+
 //BEGIN ABOUT STYLING
 @media screen and (max-width: $break-large){
   #about{
@@ -262,10 +282,11 @@ ul{
   height: 130vh;
 }
 }
-//END ABOUT STYLINIG
+
+
 //BEGIN CONTACT STYLING
 #contact{
-  height: 50vh;
+  height: 80vh;
 }
 
 //END CONTACT STYLING

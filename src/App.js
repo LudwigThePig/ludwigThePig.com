@@ -48,7 +48,7 @@ class Navbar extends Component {
     let offset = {
       home: document.getElementById('home').offsetTop - tenVh,
       tech: document.getElementById('tech').offsetTop - tenVh,
-      projects: document.getElementById('projects').offsetTop - tenVh,
+      portfolio: document.getElementById('portfolio').offsetTop - tenVh,
       about: document.getElementById('about').offsetTop - tenVh,
       contact: document.getElementById('contact').offsetTop - tenVh,
     };
@@ -58,16 +58,16 @@ class Navbar extends Component {
           active: 'home'
         });
       }
-    } else if (wind > offset.tech && wind < offset.projects){
+    } else if (wind > offset.tech && wind < offset.portfolio){
       if (this.state.active !== 'tech' ){
         this.setState({
           active: 'tech'
         });
       }
-    } else if ( wind > offset.projects && wind < offset.about ){
-      if (this.state.active !== 'projects' ){
+    } else if ( wind > offset.portfolio && wind < offset.about ){
+      if (this.state.active !== 'portfolio' ){
         this.setState({
-          active: 'projects'
+          active: 'portfolio'
         });
         }
     } else if ( wind > offset.about && wind < offset.contact ){
@@ -105,8 +105,8 @@ class Navbar extends Component {
             <span>Home</span></a>
           <a href="#tech" className={
             (this.state.active === 'tech')?'active':null}><span>Tech</span></a>
-          <a href="#projects" className={
-            (this.state.active === 'projects')?'active':null}><span>Projects</span></a>
+          <a href="#portfolio" className={
+            (this.state.active === 'portfolio')?'active':null}><span>Portfolio</span></a>
           <a href="#about" className={
             (this.state.active === 'about')?'active':null}><span>About</span></a>
           <a href="#contact" className={
@@ -129,7 +129,7 @@ class Body extends Component{
       <div>
       <Home />
       <Tech />
-      <Projects />
+      <Portfolio />
       <About />
       <Contact />    
       </div>
@@ -148,7 +148,7 @@ class Home extends Component{
           <h2>Howdy, my name is </h2>
           <h1>Morgan Galvin</h1>
           <h2 style={{textAlign: 'center'}}>Javascript Extraordinaire</h2> 
-          <p>I am a web developer living Wellington, NZ. On this site, you will find references to my work, projects, and expertise. I am seeking new opportunities.
+          <p>I am a web developer living Wellington, NZ. On this site, you will find references to my work, portfolio, and expertise. I am seeking new opportunities.
           </p>
           <h4><a href='https://www.duracellenergybank.com/'>INSP</a></h4>
         </div>
@@ -159,49 +159,99 @@ class Home extends Component{
 }
 
 class Tech extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      tech: true
+    }
+    this.handleClick = this.handleClick.bind(this)
+  }
+  handleClick(){
+    this.setState({
+      tech: !this.state.tech
+    })
+  }
   render(){
-    return(
-      <div id="tech" className="body">
-        <div className="left-col">
-          <h1>Tech I Work With</h1>
-          <ul>
-            <li>HTML5</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React  Redux</li>
-            <li>Node.js & Express.js</li>
-            <li>MongoDB & Mongoose</li>
-            <li>C#</li>
-            <li>Photoshop</li>
-          </ul>
-        </div>
-        <div className="right-col">
-        <img src={coffee} alt="81301 Coffee" />
-          <h1>Tech I Want to Work With</h1>
-          <ul>
-              <li>Everything</li>
-              <li></li>
-              <li></li>
-              <li></li>
+    if (this.state.tech){
+      return(
+        <div id="tech" className="body">
+          <div className="left-col">
+              <h1 onClick={this.handleClick}>Tech I Work With</h1>
+              <h1 className='disabled' onClick={this.handleClick}>Credentials</h1>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React  Redux</li>
+              <li>Node.js & Express.js</li>
+              <li>MongoDB & Mongoose</li>
+              <li>C#</li>
+              <li>Photoshop</li>
             </ul>
           </div>
-      </div>
+          <div className="right-col">
+          <img src={coffee} alt="81301 Coffee" />
+            <h1>Tech I Want to Work With</h1>
+            <ul>
+                <li>Everything</li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+        </div>
     )
+    } else {
+      return(
+        <div id="tech" className="body">
+          <div className="left-col">
+              <h1 onClick={this.handleClick}>Credentials</h1>
+              <h1 className='disabled' onClick={this.handleClick}>Tech I Work With</h1>
+            <ul>
+              <li>Bachelors of Art, Philosophy, 2016</li>
+              <li><b>freeCodeCamp Certifications, 2018</b></li>
+              <ul>
+                <a href="https://www.freecodecamp.org/certification/ludwigthepig/front-end-libraries"><li>Front End Libraries</li></a>
+                <a href="https://www.freecodecamp.org/certification/ludwigthepig/javascript-algorithms-and-data-structures"><li>JavaScript Algorithms and Data Structures</li></a>          
+                <a href="https://www.freecodecamp.org/certification/ludwigthepig/legacy-front-end"><li>Legacy Front End Development</li></a>
+              </ul>
+              <li>Certified in CPR and First Aid</li>
+            </ul>
+          </div>
+          <div className="right-col">
+          <img src={coffee} alt="81301 Coffee" />
+            <h1>Tech I Want to Work With</h1>
+            <ul>
+                <li>Everything</li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+        </div>
+    )
+    }
   }
 }
 
-class Projects extends Component{
+class Portfolio extends Component{
   render(){
     return(
-      <div id="projects" className="body">
-        <h1>Yeah, I've done some pretty cool stuff</h1>
-        <h2>Here is a list!</h2>
-        <ul>
-          <li>Markdown Previewer!</li>
-          <li>Drum Machine!</li>
-          <li>Klackers!</li>
-        </ul>
-        <p>Check out my Github and Codepen for more!</p>
+      <div id="portfolio" className="body">
+        <div className="left-col">
+        <h1></h1>
+        </div>
+        <div className='right-col'>
+          <h1>Yeah, I've done some pretty cool stuff</h1>
+          <h2>Here is a list!</h2>
+          <ul>
+            <li>Markdown Previewer!</li>
+            <li>Drum Machine!</li>
+            <li>Klackers!</li>
+          </ul>
+          <p>Check out my Github and Codepen for more!</p>
+        </div>
+
       </div>
     )
   }
