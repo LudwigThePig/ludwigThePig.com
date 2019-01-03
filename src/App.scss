@@ -206,9 +206,14 @@ ul{
     color: #CB8B5A;
     margin: 0;
   }
-  a, a:active, .disabled{
-    color: $primary-clr;
+  a, a:active{
+    color: $secondary-clr;
     text-decoration: none;
+    cursor: pointer;
+    font-weight: 100;
+  }
+  .disabled{
+    color: #000;
     cursor: pointer;
     font-weight: 100;
   }
@@ -228,6 +233,11 @@ ul{
     width: 45vw;
     height: auto;
 }
+.mininav-wrapper{
+  background: $primary-clr !important;
+  border-radius: 5px;
+  width: 300px;
+}
 }
 @media screen and (max-width: $break-large){
   #tech{
@@ -240,6 +250,10 @@ ul{
     li{
       font-size: 22px;
     }
+    .mininav-wrapper{
+      width: 250px;
+    }
+
   }
 }
 @media screen and (max-width: $break-medium){
@@ -264,9 +278,11 @@ ul{
 }
 //PORTFOLIO
 #portfolio{
+  background: $third-clr;
   .jumbo{
     background: $secondary-clr;
-    width: 80vw;
+    // border: 4px solid $secondary-clr;
+    width: 90vw;
     margin: auto;
     display: flex;
     align-items: space-around;
@@ -275,10 +291,12 @@ ul{
     color: $secondary-clr; 
   }
   .left-col{
-    background: $third-clr;
+    background: #eee;
+    border-right: 7px solid $third-clr;
+    padding: 0 2vw;
   }
   .disabled{
-    color: #ddd;
+    color: $third-clr;
     text-decoration: none;
     cursor: pointer;
     font-weight: 100;

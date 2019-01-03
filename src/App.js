@@ -178,8 +178,10 @@ class Tech extends Component{
       return(
         <div id="tech" className="body">
           <div className="left-col">
+          <div className="mininav-wrapper">  
               <h1 onClick={this.handleClick}>Tech I Work With</h1>
               <h1 className='disabled' onClick={this.handleClick}>Credentials</h1>
+            </div>
             <ul>
               <li>HTML5</li>
               <li>CSS</li>
@@ -207,8 +209,10 @@ class Tech extends Component{
       return(
         <div id="tech" className="body">
           <div className="left-col">
-              <h1 onClick={this.handleClick}>Credentials</h1>
+            <div className="mininav-wrapper">  
               <h1 className='disabled' onClick={this.handleClick}>Tech I Work With</h1>
+              <h1 onClick={this.handleClick}>Credentials</h1>
+            </div>
             <ul>
               <li>Bachelors of Art, Philosophy, 2016</li>
               <li><b>freeCodeCamp Certifications, 2018</b></li>
@@ -225,9 +229,6 @@ class Tech extends Component{
             <h1>Tech I Want to Work With</h1>
             <ul>
                 <li>Everything</li>
-                <li></li>
-                <li></li>
-                <li></li>
               </ul>
             </div>
         </div>
