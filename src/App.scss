@@ -207,7 +207,7 @@ ul{
     margin: 0;
   }
   a, a:active{
-    color: $secondary-clr;
+    color: $secondary-clr ;
     text-decoration: none;
     cursor: pointer;
     font-weight: 100;
@@ -281,7 +281,6 @@ ul{
   background: $third-clr;
   .jumbo{
     background: $secondary-clr;
-    // border: 4px solid $secondary-clr;
     width: 90vw;
     margin: auto;
     display: flex;
@@ -313,14 +312,43 @@ ul{
     height: 80vh;
     margin: 10px 50px auto 50px;
     }
-  .portfolio-wrapper{
-    text-align: center;
-    max-width: 45%;
-    img{
-      max-width: 100%;
-      width: auto;
-    }
-  }
+    .portfolio-wrapper{
+      display: flex;
+      max-width: 45%;
+      flex-direction: column;
+      justify-content: center;
+        a{
+          text-align: center;
+          color: #fff;
+          text-decoration: none;
+        }
+        img{
+          max-width: 100%;
+          width: auto;
+        }
+      }
+      //this creates the hover effect for the portfolio images
+      .link-wrapper{
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+        transition: .5s ease;
+        opacity: 0;
+        background: $text-clr;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      img{
+        opacity: 1;
+        transition: .5s ease;
+      }
+      .portfolio-wrapper:hover img{
+        opacity: 0.4;
+      }
+      .portfolio-wrapper:hover .link-wrapper{
+        opacity: 1;
+      }
 }
 
 

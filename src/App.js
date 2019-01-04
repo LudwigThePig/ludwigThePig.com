@@ -218,10 +218,11 @@ class Tech extends Component{
               <li><b>freeCodeCamp Certifications, 2018</b></li>
               <ul>
                 <a href="https://www.freecodecamp.org/certification/ludwigthepig/front-end-libraries"><li>Front End Libraries</li></a>
+                <a href="https://www.freecodecamp.org/certification/ludwigthepig/apis-and-microservices"><li>APIs and Microservices</li></a>
                 <a href="https://www.freecodecamp.org/certification/ludwigthepig/javascript-algorithms-and-data-structures"><li>JavaScript Algorithms and Data Structures</li></a>          
                 <a href="https://www.freecodecamp.org/certification/ludwigthepig/legacy-front-end"><li>Legacy Front End Development</li></a>
+                
               </ul>
-              <li>Certified in CPR and First Aid</li>
             </ul>
           </div>
           <div className="right-col">
@@ -242,20 +243,29 @@ class Portfolio extends Component{
     return(
       <div id="portfolio" className="body">
          <div className="jumbo"> 
-          <div className="left-col">
-            <h1>Websites</h1>
-            <h1 className="disabled">Projects</h1>
-          </div>
-          <div className='right-col'>
-            <div className="portfolio-wrapper">
-              <p>ROARING FORK INSURANCE</p>
-              <img src={rfi} alt="Roaring Fork Insurance"></img>
+
+            <div className="left-col">
+              <h1>Websites</h1>
+              <h1 className="disabled">Projects</h1>
             </div>
-            <div className="portfolio-wrapper">
-              <p>DURANGO RUNNING CLUB</p>
-              <img src={drc} alt="Durango Running Club"></img>
+            
+            <div className='right-col'>
+
+              <div className="portfolio-wrapper">
+                <div className="link-wrapper">
+                  <a href="roaringforkins.com">ROARING FORK INSURANCE</a>
+                </div>
+                <img src={rfi} alt="Roaring Fork Insurance"></img>
+              </div>
+
+              <div className="portfolio-wrapper">
+                <div className="link-wrapper">
+                  <a href="durangorunningclub.com"> DURANGO RUNNING CLUB</a>
+                </div>
+                <img src={drc} alt="Durango Running Club"></img>
+              </div>
+              
             </div>
-          </div>
         </div>
       </div>
     )
