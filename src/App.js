@@ -242,8 +242,8 @@ class Portfolio extends Component{
   render(){
     return(
       <div id="portfolio" className="body">
+        <h1 className="header">Portfolio</h1>
          <div className="jumbo"> 
-
             <div className="left-col">
               <h1>Websites</h1>
               <h1 className="disabled">Projects</h1>
@@ -251,20 +251,23 @@ class Portfolio extends Component{
             
             <div className='right-col'>
 
-              <div className="portfolio-wrapper">
-                <div className="link-wrapper">
-                  <a href="roaringforkins.com">ROARING FORK INSURANCE</a>
+              <a href="roaringforkins.com">
+                <div className="portfolio-wrapper">
+                  <div className="link-wrapper">
+                    <p>ROARING FORK INSURANCE</p>
+                  </div>
+                  <img src={rfi} alt="Roaring Fork Insurance"></img>
                 </div>
-                <img src={rfi} alt="Roaring Fork Insurance"></img>
-              </div>
+              </a>
+              <a href="durangorunningclub.com">
+                <div className="portfolio-wrapper">
+                  <div className="link-wrapper">
+                    <p> DURANGO RUNNING CLUB</p>
+                  </div>
+                  <img src={drc} alt="Durango Running Club"></img>
+                </div>
+              </a>
 
-              <div className="portfolio-wrapper">
-                <div className="link-wrapper">
-                  <a href="durangorunningclub.com"> DURANGO RUNNING CLUB</a>
-                </div>
-                <img src={drc} alt="Durango Running Club"></img>
-              </div>
-              
             </div>
         </div>
       </div>

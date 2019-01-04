@@ -279,8 +279,11 @@ ul{
 //PORTFOLIO
 #portfolio{
   background: $third-clr;
+  .header{
+     font-size: 4vw;
+     margin: 0 auto 2px 5vw;
+  }
   .jumbo{
-    background: $secondary-clr;
     width: 90vw;
     margin: auto;
     display: flex;
@@ -291,6 +294,7 @@ ul{
   }
   .left-col{
     background: #eee;
+    width: 20%;
     border-right: 7px solid $third-clr;
     padding: 0 2vw;
   }
@@ -304,19 +308,18 @@ ul{
     color: $secondary-clr;
   }
   .right-col{
+    background: $secondary-clr;
     display: flex;
-    flex: 1;
+    flex-wrap: wrap;
+    width: 80%;
     align-items: center;
     justify-content: space-around;
     color: white;
     height: 80vh;
-    margin: 10px 50px auto 50px;
     }
     .portfolio-wrapper{
-      display: flex;
-      max-width: 45%;
-      flex-direction: column;
-      justify-content: center;
+      max-width: 400px;
+      position: relative;
         a{
           text-align: center;
           color: #fff;
@@ -324,22 +327,30 @@ ul{
         }
         img{
           max-width: 100%;
-          width: auto;
         }
       }
       //this creates the hover effect for the portfolio images
       .link-wrapper{
-        padding: 10px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
         width: 100%;
-        margin: auto;
-        transition: .5s ease;
         opacity: 0;
         background: $text-clr;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        text-align: center;
+        p{ 
+          color: #fff;
+          top: 50%;
+          left: 50%;
+          position: absolute;
+          text-align: center;
+
+}
       }
       img{
+        display: block;
         opacity: 1;
         transition: .5s ease;
       }
@@ -349,6 +360,36 @@ ul{
       .portfolio-wrapper:hover .link-wrapper{
         opacity: 1;
       }
+}
+//tablet and small computer breaks
+@media screen and (max-width: 860px){
+  #portfolio{
+    .header{
+      font-size: 5.5vw;
+      margin: 0px auto auto 2.5vw;
+      position: absolute;
+   }
+    .jumbo{
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .left-col{ //now top row
+      width: 40vw;
+      text-align: center;
+    }
+    .right-col{ //now bottom row
+      font-size: 10px;
+      width: 95vw;
+      height: 90vh;
+    }
+    h1{
+      font-size: 4vw;
+      display: inline-block;
+      margin: 5px 10px;
+    }
+    
+  }
 }
 
 
