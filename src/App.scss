@@ -319,6 +319,9 @@ ul{
   a:hover{
     color: #fff;
   }
+  img{
+    border-radius: 10px;
+  }
   .left-col{
     background: #eee;
     width: 20%;
@@ -373,6 +376,7 @@ ul{
       width: 100%;
       opacity: 0;
       background: $text-clr;
+      border-radius: 10px;
       p{ 
         color: #fff;
         top: 50%;
@@ -467,9 +471,14 @@ ul{
 }
 @media screen and (max-width: 640px){
   #portfolio .proj-wrapper{
-    img{ float: none;}
     p{ font-size: 16px;}    
     span{ font-size: 24px;}
+    img{ 
+      float: none;
+      width: 150px;
+      height: 150px;
+    }
+
   }
 }
 
@@ -478,18 +487,41 @@ ul{
   .left-col{
       white-space: nowrap;
     }
+    .proj-wrapper{
+      img{
+        width: 125px;
+        height: 125px;
+      }
+    }
   }
 }
 
 //BEGIN ABOUT STYLING
+#about{
+  display: block;
+  width:80vw;
+  margin: 20px auto;
+  padding: 0;
+  span{
+    font-weight: bold;
+    cursor: pointer;
+    color: $secondary-clr;
+    font-size: 1em;
+  }
+  .long{
+    height: 180vh;
+    color: green;
+  }
+}
 @media screen and (max-width: $break-large){
-  #about{
-  height: 110vh;
+  .long{
+  height: 180vh;
+  p{font-size: 18px !important;}
 }
 }
 @media screen and (max-width: $break-medium){
-  #about{
-  height: 130vh;
+  .long{
+  height: 200vh;
 }
 }
 
