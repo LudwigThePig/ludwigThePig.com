@@ -213,7 +213,7 @@ ul{
     font-weight: 100;
   }
   .disabled{
-    color: #000;
+    color: #111;
     cursor: pointer;
     font-weight: 100;
   }
@@ -223,6 +223,7 @@ ul{
   }
   li{
     font-size: 30px;
+    list-style-type: circle;
   }
   .right-col{
     h1, p{
@@ -234,15 +235,30 @@ ul{
     height: auto;
 }
 .mininav-wrapper{
-  background: $primary-clr !important;
-  border-radius: 5px;
-  width: 300px;
+  background: $primary-clr;
+  border-radius: 10px 10px 0px;
+  width: 350px;
+  text-align: center;
 }
 }
 @media screen and (max-width: $break-large){
   #tech{
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: auto;
+    .left-col{
+      width: 70vw;
+      margin: 0px auto;
+    }
+
+    img{
+      width: 80vw;
+      margin: 0 7.5vw;
+    }
     .right-col{
-      margin-top: 10vh;
+      ul, h1{
+        display: none;
+      }
     }
     h1{
     font-size: 32px;
@@ -259,7 +275,6 @@ ul{
 @media screen and (max-width: $break-medium){
   #tech{
     flex-flow: column;
-    justify-content: center;
     h1{
       font-size: 30px;
     }

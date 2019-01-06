@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.scss';
 import brand from './img/favicon.png';
-import perins from './img/perins-fire-md.jpg'
-import coffee from './img/Coffee-md.jpg'
-import drc from './img/drc-site.jpg';
-import rfi from './img/rf-site.jpg';
+import perins from './img/perins-fire-300w.jpg'
+import coffee from './img/Coffee-700w.jpg'
+import drc from './img/drc-500w.jpg';
+import rfi from './img/rf-500w.jpg';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -194,13 +194,10 @@ class Tech extends Component{
             </ul>
           </div>
           <div className="right-col">
-          <img src={coffee} alt="81301 Coffee" />
+            <img src={coffee} alt="81301 Coffee" />
             <h1>Tech I Want to Work With</h1>
             <ul>
                 <li>Everything</li>
-                <li></li>
-                <li></li>
-                <li></li>
               </ul>
             </div>
         </div>
@@ -226,7 +223,7 @@ class Tech extends Component{
             </ul>
           </div>
           <div className="right-col">
-          <img src={coffee} alt="81301 Coffee" />
+            <img src={coffee} alt="81301 Coffee" />
             <h1>Tech I Want to Work With</h1>
             <ul>
                 <li>Everything</li>
