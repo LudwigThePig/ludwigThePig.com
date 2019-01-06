@@ -295,28 +295,28 @@ class Portfolio extends Component{
                 <div className="proj-wrapper">
                   <a href="https://receptive-explanation.glitch.me/">
                     <img src={exercise} alt="Exercise Tracker"></img>
-                    <span>Exercise Tracker</span><br /> built with Node, Express, Mongoose, and MongoDB
+                    <p><span>Exercise Tracker</span><br /> built with Node, Express, Mongoose, and MongoDB</p>
                   </a>
                 </div>
 
                 <div className="proj-wrapper">
                   <a href="https://codepen.io/moegain/pen/WLGrqd">
                     <img src={drum} alt="Drum Machine"></img>
-                    <span>Drum Machine</span><br /> built with React
+                    <p><span>Drum Machine</span><br /> built with React</p>
                   </a>
                 </div>
 
                 <div className="proj-wrapper">
                   <a href="https://codepen.io/moegain/pen/KbpoyR">
                     <img src={markdown} alt="Markdown Previewer"></img>
-                    <span>Markdown Previewer</span><br /> built with React and renderer
+                    <p><span>Markdown Previewer</span><br /> built with React and renderer-npm</p>
                   </a>
                 </div>
 
                 <div className="proj-wrapper">
                   <a href="https://codepen.io/moegain/pen/dQvYpa">
                     <img src={klackers} alt="Klackers the Game"></img>
-                    <span>Klackers Game</span><br /> built with vanilla JavaScript
+                    <p><span>Klackers Game</span><br /> built with vanilla JavaScript</p>
                   </a>
                 </div>
 
