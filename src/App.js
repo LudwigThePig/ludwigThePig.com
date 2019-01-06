@@ -14,6 +14,9 @@ import exercise from './img/exercise-300w.jpg';
 import klackers from './img/klackers-300w.jpg';
 import markdown from './img/markdown-300w.jpg';
 import drum from './img/drum-300w.jpg';
+import contact from './img/contact-300w.jpg';
+
+
 
 library.add(fab);
 
@@ -389,12 +392,18 @@ class Contact extends Component{
   render(){
     return(
       <div id="contact" className="body">
-        <h1>Let's get in touch</h1>
-        <h3>I am here to learn and help you build the kick ass platform that your company needs!</h3>
-        <p>morgan@ludwigthepig.com
-          <br />
-          +64 21 029 81349 <i>(in New Zealand temporarily)</i>
-        </p>
+        <div className="jumbo">
+          <div className="left-col">
+            <h1>Let's get in touch</h1>
+            <p>Email: <a href="mailto:morgan@ludwigthepig.com">morgan@ludwigthepig.com</a></p>
+            <p>Phone: <a href="tel:+6402102981349">+64 (0)21 - 029 813 39</a></p>
+            <p>Wellington, New Zealand</p>
+          </div>
+
+        <div className="right-col">
+          <img src={contact} alt="Morgan Galvin"></img>
+        </div>
+        </div>
       </div>
     )
   }
