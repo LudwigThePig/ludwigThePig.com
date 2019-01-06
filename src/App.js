@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import './App.scss';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fab } from '@fortawesome/free-brands-svg-icons'
+//image imports
 import brand from './img/favicon.png';
 import perins from './img/perins-fire-300w.jpg'
 import coffee from './img/Coffee-700w.jpg'
 import drc from './img/drc-500w.jpg';
 import rfi from './img/rf-500w.jpg';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fab } from '@fortawesome/free-brands-svg-icons'
-library.add(fab);
+import exercise from './img/exercise-300w.jpg';
+import klackers from './img/klackers-300w.jpg';
+import markdown from './img/markdown-300w.jpg';
+import drum from './img/drum-300w.jpg';
 
+library.add(fab);
 
 class App extends Component{
   render(){
@@ -285,24 +290,37 @@ class Portfolio extends Component{
                 <h1>Projects</h1>
               </div>
               
-              <div className='right-col'>
+              <div className='grid'>
   
-                <a href="roaringforkins.com">
-                  <div className="portfolio-wrapper">
-                    <div className="link-wrapper">
-                      <p>SHIT STICK</p>
-                    </div>
-                    <img src={rfi} alt="Roaring Fork Insurance"></img>
-                  </div>
-                </a>
-                <a href="durangorunningclub.com">
-                  <div className="portfolio-wrapper">
-                    <div className="link-wrapper">
-                      <p> DURANGO RUNNING CLUB</p>
-                    </div>
-                    <img src={drc} alt="Durango Running Club"></img>
-                  </div>
-                </a>
+                <div className="proj-wrapper">
+                  <a href="https://receptive-explanation.glitch.me/">
+                    <img src={exercise} alt="Exercise Tracker"></img>
+                    <span>Exercise Tracker</span><br /> built with Node, Express, Mongoose, and MongoDB
+                  </a>
+                </div>
+
+                <div className="proj-wrapper">
+                  <a href="https://codepen.io/moegain/pen/WLGrqd">
+                    <img src={drum} alt="Drum Machine"></img>
+                    <span>Drum Machine</span><br /> built with React
+                  </a>
+                </div>
+
+                <div className="proj-wrapper">
+                  <a href="https://codepen.io/moegain/pen/KbpoyR">
+                    <img src={markdown} alt="Markdown Previewer"></img>
+                    <span>Markdown Previewer</span><br /> built with React and renderer
+                  </a>
+                </div>
+
+                <div className="proj-wrapper">
+                  <a href="https://codepen.io/moegain/pen/dQvYpa">
+                    <img src={klackers} alt="Klackers the Game"></img>
+                    <span>Klackers Game</span><br /> built with vanilla JavaScript
+                  </a>
+                </div>
+
+
   
               </div>
           </div>
