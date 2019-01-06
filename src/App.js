@@ -195,10 +195,7 @@ class Tech extends Component{
           </div>
           <div className="right-col">
             <img src={coffee} alt="81301 Coffee" />
-            <h1>Tech I Want to Work With</h1>
-            <ul>
-                <li>Everything</li>
-              </ul>
+            <p>CLICK CREDENTIALS TO SEE MORE</p>
             </div>
         </div>
     )
@@ -224,10 +221,6 @@ class Tech extends Component{
           </div>
           <div className="right-col">
             <img src={coffee} alt="81301 Coffee" />
-            <h1>Tech I Want to Work With</h1>
-            <ul>
-                <li>Everything</li>
-              </ul>
             </div>
         </div>
     )
@@ -236,39 +229,87 @@ class Tech extends Component{
 }
 
 class Portfolio extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      websites: true
+    }
+    this.handleClick = this.handleClick.bind(this)
+  }
+  handleClick(){
+    this.setState({
+      websites: !this.state.websites
+    })
+  }
   render(){
-    return(
-      <div id="portfolio" className="body">
-        <h1 className="header">Portfolio</h1>
-         <div className="jumbo"> 
-            <div className="left-col">
-              <h1>Websites</h1>
-              <h1 className="disabled">Projects</h1>
-            </div>
-            
-            <div className='right-col'>
-
-              <a href="roaringforkins.com">
-                <div className="portfolio-wrapper">
-                  <div className="link-wrapper">
-                    <p>ROARING FORK INSURANCE</p>
+    if (this.state.websites){
+      return(
+        <div id="portfolio" className="body">
+          <h1 className="header">Portfolio</h1>
+           <div className="jumbo"> 
+              <div className="left-col">
+                <h1>Websites</h1>
+                <h1 className="disabled" onClick={this.handleClick}>Projects</h1>
+              </div>
+              
+              <div className='right-col'>
+  
+                <a href="roaringforkins.com">
+                  <div className="portfolio-wrapper">
+                    <div className="link-wrapper">
+                      <p>ROARING FORK INSURANCE</p>
+                    </div>
+                    <img src={rfi} alt="Roaring Fork Insurance"></img>
                   </div>
-                  <img src={rfi} alt="Roaring Fork Insurance"></img>
-                </div>
-              </a>
-              <a href="durangorunningclub.com">
-                <div className="portfolio-wrapper">
-                  <div className="link-wrapper">
-                    <p> DURANGO RUNNING CLUB</p>
+                </a>
+                <a href="durangorunningclub.com">
+                  <div className="portfolio-wrapper">
+                    <div className="link-wrapper">
+                      <p> DURANGO RUNNING CLUB</p>
+                    </div>
+                    <img src={drc} alt="Durango Running Club"></img>
                   </div>
-                  <img src={drc} alt="Durango Running Club"></img>
-                </div>
-              </a>
-
-            </div>
+                </a>
+  
+              </div>
+          </div>
         </div>
-      </div>
-    )
+      )
+    } else {
+      return(
+        <div id="portfolio" className="body">
+          <h1 className="header">Portfolio</h1>
+           <div className="jumbo"> 
+              <div className="left-col">
+                <h1 className="disabled" onClick={this.handleClick}>Websites</h1>
+                <h1>Projects</h1>
+              </div>
+              
+              <div className='right-col'>
+  
+                <a href="roaringforkins.com">
+                  <div className="portfolio-wrapper">
+                    <div className="link-wrapper">
+                      <p>SHIT STICK</p>
+                    </div>
+                    <img src={rfi} alt="Roaring Fork Insurance"></img>
+                  </div>
+                </a>
+                <a href="durangorunningclub.com">
+                  <div className="portfolio-wrapper">
+                    <div className="link-wrapper">
+                      <p> DURANGO RUNNING CLUB</p>
+                    </div>
+                    <img src={drc} alt="Durango Running Club"></img>
+                  </div>
+                </a>
+  
+              </div>
+          </div>
+        </div>
+      )
+    }
+
   }
 }
 class About extends Component{

@@ -226,8 +226,10 @@ ul{
     list-style-type: circle;
   }
   .right-col{
-    h1, p{
-      text-align: right;
+    p{
+      font-size: 22px;
+      color: $secondary-clr;
+      font-style: italic;
     }
   }
   img{
@@ -256,8 +258,9 @@ ul{
       margin: 0 7.5vw;
     }
     .right-col{
-      ul, h1{
-        display: none;
+      p{
+        font-size: 16px;
+        text-align: center
       }
     }
     h1{
@@ -274,7 +277,7 @@ ul{
 }
 @media screen and (max-width: $break-medium){
   #tech{
-    flex-flow: column;
+    height: 70vh;
     h1{
       font-size: 30px;
     }
