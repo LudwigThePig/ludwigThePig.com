@@ -158,10 +158,9 @@ class Home extends Component{
       <div className='right-col'>
           <h2>Howdy, my name is </h2>
           <h1>Morgan Galvin</h1>
-          <h2 style={{textAlign: 'center'}}>Javascript Extraordinaire</h2> 
-          <p>I am a fullstack web developer living Wellington, NZ. On this site, you will find references to my work, portfolio, and expertise. I am seeking new opportunities.
+          <h2 style={{textAlign: 'center'}}>the JavaScript Extraordinaire</h2> 
+          <p>I am a full stack web developer living in Wellington, NZ. On this site, you will find references to my work, credentials, and expertise. I am seeking new opportunities.
           </p>
-          <h4><a href='https://www.duracellenergybank.com/'>INSP</a></h4>
         </div>
       </div>
       

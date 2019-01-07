@@ -203,7 +203,7 @@ ul{
   display: flex;
   justify-content: space-around;
   h1{
-    color: #CB8B5A;
+    color: #eee;
     margin: 0;
   }
   a, a:active{
@@ -237,7 +237,7 @@ ul{
     height: auto;
 }
 .mininav-wrapper{
-  background: $primary-clr;
+  background: $secondary-clr;
   border-radius: 10px 10px 0px;
   width: 350px;
   text-align: center;
@@ -566,7 +566,7 @@ ul{
     justify-content: flex-start;
     width: 100%;
     img{
-      height: 150px;
+      height: 200px;
     }
     .left-col{ //now bottom row
       width: 100%;
