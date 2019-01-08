@@ -549,6 +549,9 @@ ul{
   .left-col{
     width: 50%;
   }
+  .right-col{
+    text-align: center;
+  }
   img{
     height: 250px;
     width: auto;
@@ -557,6 +560,11 @@ ul{
   }
   img:hover{
     border: 10px solid $primary-clr;
+  }
+  #flaunt{
+    text-align: center;
+    font-size: 14px;
+    color: #999
   }
 }
 @media screen and (max-width: $break-large){

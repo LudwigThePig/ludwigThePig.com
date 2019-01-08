@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import styles from './App.scss';
 import classNames from 'classnames';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -262,7 +263,7 @@ class Portfolio extends Component{
               
               <div className='right-col'>
   
-                <a href="roaringforkins.com">
+                <a href="https://www.roaringforkins.com/">
                   <div className="portfolio-wrapper">
                     <div className="link-wrapper">
                       <p>ROARING FORK INSURANCE</p>
@@ -270,7 +271,7 @@ class Portfolio extends Component{
                     <img src={rfi} alt="Roaring Fork Insurance"></img>
                   </div>
                 </a>
-                <a href="durangorunningclub.com">
+                <a href="https://www.durangorunningclub.org/">
                   <div className="portfolio-wrapper">
                     <div className="link-wrapper">
                       <p> DURANGO RUNNING CLUB</p>
@@ -403,6 +404,8 @@ class Contact extends Component{
           <img src={contact} alt="Morgan Galvin"></img>
         </div>
         </div>
+        <p id="flaunt">This site was built with React, SCSS, and hosted on AWS!</p>
+
       </div>
     )
   }
@@ -427,9 +430,9 @@ class Footer extends Component{
       <a href="https://www.strava.com/athletes/5897641">
       <FontAwesomeIcon icon={['fab', 'strava']} className='fa' size="3x" />
       </a>
+      <br /> <br />
       </footer>
     )
   }
 }
-
 export default App;
