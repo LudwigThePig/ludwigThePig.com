@@ -1,3 +1,20 @@
+/*
+STRUCTURE
+
+-Variables and general styling
+-Each React Component has its own section with this structure:
+  -Desktop and initial styling
+    -Element -> Class -> Elements in class -> class in class -> id
+  -Conditionally applied classes
+  -Medium/tablet styling
+  -Mobile styling
+
+*Smallest supported screen is an iPhone 4s (340px wide)
+
+
+*/
+
+
 //VARIABLES
 $primary-clr: #454851;
 $secondary-clr: #CB8B5A;
@@ -277,7 +294,7 @@ ul{
 }
 @media screen and (max-width: $break-medium){
   #tech{
-    height: 70vh;
+    height: 80vh;
     h1{
       font-size: 30px;
     }
@@ -471,7 +488,10 @@ ul{
 }
 @media screen and (max-width: 640px){
   #portfolio {
-    .right-col{padding: 0;}
+    .right-col{
+      padding: 0;
+      width: 95vw;
+    }
     .proj-wrapper{
       p{ font-size: 16px;}    
       span{ font-size: 24px;}
