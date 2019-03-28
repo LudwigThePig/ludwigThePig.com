@@ -164,7 +164,7 @@ class Home extends Component{
           <h2>Howdy, my name is </h2>
           <h1>Morgan Galvin</h1>
           <h2 style={{textAlign: 'center'}}>the JavaScript Extraordinaire</h2> 
-          <p>I am a full stack web developer living in Boulder, CO. On this site, you will find references to my work, credentials, and expertise. I am open to new opportunities here in Boulder, <br /> <span style={spanStyle}> or wherever the tech meets the mountains 🏔💻.</span>
+          <p>I am a full stack web developer living in Boulder, CO. On this site, you will find references to my work, credentials, and expertise. I am open to new opportunities here in Boulder, <br /> <span style={spanStyle}> or wherever the tech meets the mountains <span role="img">🏔💻</span>.</span>
           </p>
         </div>
       </div>
