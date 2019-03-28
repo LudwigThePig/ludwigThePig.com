@@ -455,20 +455,38 @@ ul{
       font-size: 5.5vw;
       margin: 0px auto auto 2.5vw;
       position: absolute;
+      color: white;
    }
+   background-color: $secondary-clr;
+   color: green !important;
+
     .jumbo{
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
+      background-color: $secondary-clr;
     }
     .left-col{ //now top row
       width: 50vw;
       text-align: center;
       margin:  0 0 0 auto;
+      background-color: $secondary-clr;
+      border: 0;
+      h1{
+        color: white;
+        font-weight: 200;
+        text-decoration: underline;
+      }
+      .disabled{
+        color: black;
+        text-decoration: none;
+      }
     }
     .right-col, .grid{ //now bottom row
+      background-color: inherit;
+      color: $secondary-clr;
       font-size: 10px;
-      width: 92vw;
+      width: 100vw;
       height: 90vh;
       padding: 2vw;
     }
