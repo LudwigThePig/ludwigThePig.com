@@ -403,7 +403,6 @@ class Contact extends Component{
             <p>Phone: <a href="tel:+6402102981349">+64 (0)21 - 029 813 39</a></p>
             <p>Wellington, New Zealand</p>
           </div>
-
         <div className="right-col">
           <img src={contact} alt="Morgan Galvin"></img>
         </div>
