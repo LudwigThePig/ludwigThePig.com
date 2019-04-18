@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import styles from './App.scss';
 import classNames from 'classnames';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -13,7 +12,7 @@ import drc from './img/drc-500w.jpg';
 import rfi from './img/rf-500w.jpg';
 import exercise from './img/exercise-300w.jpg';
 import klackers from './img/klackers-300w.jpg';
-import markdown from './img/markdown-300w.jpg';
+import game from './img/game-300w.jpg';
 import drum from './img/drum-300w.jpg';
 import contact from './img/contact-300w.jpg';
 
@@ -315,9 +314,9 @@ class Portfolio extends Component{
                 </div>
 
                 <div className="proj-wrapper">
-                  <a href="https://codepen.io/moegain/pen/KbpoyR">
-                    <img src={markdown} alt="Markdown Previewer"></img>
-                    <p><span>Markdown Previewer</span><br /> built with React and renderer-npm</p>
+                  <a href="/games/dancefloor.html">
+                    <img src={game} alt="Markdown Previewer"></img>
+                    <p><span>Falling Blocks Game</span><br /> built with HTML5 Canvas</p>
                   </a>
                 </div>
 
