@@ -472,6 +472,8 @@ ul{
       margin:  0 0 0 auto;
       background-color: $secondary-clr;
       border: 0;
+      display: flex;
+      justify-content: space-around;
       h1{
         color: white;
         font-weight: 200;
@@ -491,7 +493,7 @@ ul{
       padding: 2vw;
     }
     h1{
-      font-size: 5vw;
+      font-size: 1.6rem;
       display: inline-block;
       margin: 5px 10px;
     }
