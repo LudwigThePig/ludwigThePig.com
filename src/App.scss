@@ -242,9 +242,12 @@ ul{
     font-size: 30px;
     list-style-type: circle;
   }
+  p {
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
   .right-col{
     p{
-      font-size: 22px;
       color: $secondary-clr;
       font-style: italic;
     }

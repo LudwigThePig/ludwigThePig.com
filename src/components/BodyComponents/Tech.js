@@ -21,19 +21,13 @@ class Tech extends Component{
         <div id="tech" className="body">
           <div className="left-col">
           <div className="mininav-wrapper">  
-              <h1 onClick={this.handleClick}>Tech I Work With</h1>
+              <h1 onClick={this.handleClick}>Tech & Methods</h1>
               <h1 className='disabled' onClick={this.handleClick}>Credentials</h1>
             </div>
-            <ul>
-              <li>HTML5</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>React  Redux</li>
-              <li>Node.js & Express.js</li>
-              <li>MongoDB & Mongoose</li>
-              <li>C#</li>
-              <li>Photoshop</li>
-            </ul>
+            <h2>Tech I Specialize In</h2>
+            <p>
+              HTML5, CSS, JavaScript, React, Redux, Node.js, Express.js, MongoDB, PostgreSQL, MySQL, Amazon Webservices S3, AWS Elastic Beanstalk, RDS, Sequelize, Docker, Git, D3.js, Agile development. 
+            </p>
           </div>
           <div className="right-col">
             <img src={coffee} alt="81301 Coffee" />
@@ -46,7 +40,7 @@ class Tech extends Component{
         <div id="tech" className="body">
           <div className="left-col">
             <div className="mininav-wrapper">  
-              <h1 className='disabled' onClick={this.handleClick}>Tech I Work With</h1>
+              <h1 className='disabled' onClick={this.handleClick}>Tech & Methods</h1>
               <h1 onClick={this.handleClick}>Credentials</h1>
             </div>
             <ul>
