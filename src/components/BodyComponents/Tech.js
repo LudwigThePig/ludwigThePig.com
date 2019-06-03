@@ -31,7 +31,7 @@ class Tech extends Component{
           </div>
           <div className="right-col">
             <img src={coffee} alt="81301 Coffee" />
-            <p>CLICK CREDENTIALS TO SEE MORE</p>
+            <p>CLICK <b>CREDENTIALS</b> TO SEE MORE</p>
             </div>
         </div>
     )

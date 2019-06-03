@@ -215,6 +215,7 @@ ul{
 
 //TECH
 #tech{
+  padding: 2rem;
   background: $third-clr ;
   color: #fff;
   display: flex;
@@ -245,6 +246,7 @@ ul{
   p {
     font-size: 26px;
     letter-spacing: 2px;
+    line-height: 1.9rem;
   }
   .right-col{
     p{
@@ -298,6 +300,11 @@ ul{
 @media screen and (max-width: $break-medium){
   #tech{
     height: 80vh;
+    p {
+      font-size: 16px;
+      letter-spacing: 1px;
+      line-height: 1.3rem;
+    }
     h1{
       font-size: 30px;
     }
