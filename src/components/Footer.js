@@ -9,9 +9,6 @@ const Footer = () => (
     <a href="https://github.com/LudwigThePig">
       <FontAwesomeIcon icon={['fab', 'github']} className='fa' size="3x" />
     </a>
-    <a href="https://codepen.io/moegain/">
-      <FontAwesomeIcon icon={['fab', 'codepen']} className='fa'  size="3x" />
-    </a>
     <a href="https://www.instagram.com/morgangalvinphoto/">
     <FontAwesomeIcon icon={['fab', 'instagram']} className='fa' size="3x" />
     </a>

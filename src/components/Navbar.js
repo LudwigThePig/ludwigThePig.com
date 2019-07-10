@@ -33,6 +33,7 @@ class Navbar extends Component {
       about: document.getElementById('about').offsetTop - tenVh,
       contact: document.getElementById('contact').offsetTop - tenVh,
     };
+    console.log(offset);
     if (wind < offset.tech){
       if (this.state.active !== 'home' ){ 
         this.setState({
@@ -74,6 +75,7 @@ class Navbar extends Component {
   render(){
     return(
       <div className="navbar" >
+        
         <div className="navbrand">  
         <a href="#home">
           <img src={brand} alt='pig brand' />

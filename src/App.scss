@@ -23,6 +23,16 @@ $text-clr: #111;
 $break-medium: 400px;
 $break-large: 720px;
 
+#construction {
+  display:flex;
+  justify-content: center;
+  margin: 15vh auto 0 auto;
+  text-align: center;
+  p, a {
+    font-size: 18px;
+    font-weight: 800;
+  }
+}
 
 //GENERAL STYLING
 body{
@@ -160,9 +170,11 @@ ul{
 
 //BODY COMPONENTS
 .body{
+  // margin: 10vh 0;
   padding-top: 10vh;
   height: 100vh;
 }
+
 
 
 //HOME
